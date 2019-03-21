@@ -9,8 +9,11 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
+import { ImageGallery } from '../components/ImageGallery';
+import { FadeInView } from '../components/FadeInView';
 
 import { MonoText } from '../components/StyledText';
+
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -22,6 +25,10 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
+              <Image source={require('../assets/JasonImages/images/JH_topbanner.png')} style={{width: 300, height: 30}}></Image>
+            <FadeInView>
+            <ImageGallery></ImageGallery>
+          </FadeInView>
             <Image
               source={
                 __DEV__
@@ -101,7 +108,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
   },
   developmentModeText: {
     marginBottom: 20,
