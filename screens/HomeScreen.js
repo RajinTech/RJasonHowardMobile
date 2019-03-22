@@ -25,18 +25,10 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
-              <Image source={require('../assets/JasonImages/images/JH_topbanner.png')} style={{width: 300, height: 30}}></Image>
             <FadeInView>
             <ImageGallery></ImageGallery>
           </FadeInView>
-            <Image
-              source={
-                __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
-              }
-              style={styles.welcomeImage}
-            />
+
           </View>
 
           <View style={styles.getStartedContainer}>
@@ -61,10 +53,9 @@ export default class HomeScreen extends React.Component {
         </ScrollView>
 
         <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
 
+<Image source={require('../assets/JasonImages/images/JH_topbanner.png')} style={{width: 320, height: 30}}></Image>
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
           </View>
         </View>
       </View>
@@ -95,7 +86,7 @@ export default class HomeScreen extends React.Component {
   }
 
   _handleLearnMorePress = () => {
-    WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
+    WebBrowser.openBrowserAsync('http://rjasonhoward.com/');
   };
 
   _handleHelpPress = () => {
@@ -155,7 +146,7 @@ const styles = StyleSheet.create({
   },
   tabBarInfoContainer: {
     position: 'absolute',
-    bottom: 0,
+    top: 0,
     left: 0,
     right: 0,
     ...Platform.select({
@@ -170,9 +161,11 @@ const styles = StyleSheet.create({
       },
     }),
     alignItems: 'center',
-    backgroundColor: '#fbfbfb',
+    height: 50,
+    backgroundColor: 'white',
     paddingVertical: 20,
   },
+
   tabBarInfoText: {
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
