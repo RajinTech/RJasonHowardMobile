@@ -54,7 +54,7 @@ export default class HomeScreen extends React.Component {
 
         <View style={styles.tabBarInfoContainer}>
 
-<Image source={require('../assets/JasonImages/images/JH_topbanner.png')} style={{width: 320, height: 30}}></Image>
+<Image source={require('../assets/JasonImages/images/JH_topbanner.png')} style={styles.banner}></Image>
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           </View>
         </View>
@@ -101,6 +101,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
   },
+  banner: {
+     width: 320,
+     height: 30,
+     top: 50,
+   },
   developmentModeText: {
     marginBottom: 20,
     color: 'rgba(0,0,0,0.4)',
