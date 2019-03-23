@@ -55,14 +55,6 @@ const styles = StyleSheet.create({
     borderWidth:1,
     borderColor: '#8692DF',
   },
-  bioScroller2: {
-    height: 300,
-    marginBottom: 20,
-    backgroundColor: 'beige',
-    borderRadius: 20,
-    borderWidth:2,
-    borderColor: '#ABA559',
-  },
   bioContainer: {
     alignItems: 'center',
     marginHorizontal: 30,
