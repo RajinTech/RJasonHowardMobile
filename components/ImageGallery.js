@@ -49,9 +49,10 @@ export class ImageGallery extends React.Component {
 const styles = StyleSheet.create({
 
   imageStyle: {
-    width: 350,
+    width: 320,
     height: 495,
     borderRadius: 10,
+    marginBottom: 10,
   }
 
 });

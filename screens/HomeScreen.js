@@ -5,16 +5,12 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   TouchableHighlight,
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 import { ImageGallery } from '../components/ImageGallery';
 import { FadeInView } from '../components/FadeInView';
-
-import { MonoText } from '../components/StyledText';
-
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -24,11 +20,9 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-
             <FadeInView>
             <ImageGallery/>
           </FadeInView>
-
           <View>
             <Image
               source={require('../assets/JasonImages/images/bottombanner_preview.png')} style={styles.bottomBanner}>
@@ -43,7 +37,6 @@ export default class HomeScreen extends React.Component {
             </TouchableHighlight>
           </View>
         </ScrollView>
-
         <View style={styles.tabBarInfoContainer}>
           <Image source={require('../assets/JasonImages/images/JH_topbanner.png')} style={styles.banner}></Image>
         </View>
@@ -54,7 +47,6 @@ export default class HomeScreen extends React.Component {
   _handleLearnMorePress = () => {
     WebBrowser.openBrowserAsync('http://rjasonhoward.com/');
   };
-
 }
 
 const styles = StyleSheet.create({
@@ -103,17 +95,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingVertical: 20,
   },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
-  },
+
   helpLink: {
     paddingVertical: 15,
   },
   helpLinkText: {
-    fontSize: 14,
-    color: 'rgba(96,100,109, 1)',
+    fontSize: 17,
+    color: 'white',
     textAlign: 'center',
+    fontFamily: 'Zapfino',
   },
 });
