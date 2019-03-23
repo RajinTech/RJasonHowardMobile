@@ -4,8 +4,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import BioScreen from '../screens/BioScreen';
+import ContactScreen from '../screens/ContactScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -25,36 +25,36 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const BioStack = createStackNavigator({
+  Links: BioScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+BioStack.navigationOptions = {
+  tabBarLabel: 'Bio',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'ios-color-palette' : 'md-color-palette'}
     />
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const ContactStack = createStackNavigator({
+  Contact: ContactScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+ContactStack.navigationOptions = {
+  tabBarLabel: 'Contact',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={Platform.OS === 'ios' ? 'ios-contacts' : 'md-contacts'}
     />
   ),
 };
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
-  SettingsStack,
+  BioStack,
+  ContactStack,
 });
