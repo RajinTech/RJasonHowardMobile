@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: 'darkslateblue',
     borderRadius: 20,
-    borderWidth:3,
+    borderWidth:1,
     borderColor: '#8692DF',
   },
   bioScroller2: {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: 'beige',
     borderRadius: 20,
-    borderWidth:3,
+    borderWidth:2,
     borderColor: '#ABA559',
   },
   bioContainer: {
