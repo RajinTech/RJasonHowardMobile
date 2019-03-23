@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "R Jason Howard",
-    "slug": "RJasonHoward",
+    "description": "The Works of R Jason Howard",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -10,7 +10,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/JasonImages/images/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.RajinTech.RJasonHoward",
       "supportsTablet": true
-    }
+    },
+		"android": {
+			"package": "com.RajinTech.RJasonHoward"
+		}
   }
 }
